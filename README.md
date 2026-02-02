@@ -196,3 +196,15 @@ This project serves as an excellent starting point for continued development. Fu
 - Testing additional algorithms such as Gradient Boosting or XGBoost
 - Improving interpretability using feature importance tools
 - Exploring real-world clinical datasets for stronger generalization
+
+---
+
+## 🔗 References
+
+ChatGPT. (n.d.). Retrieved September 14, 2025 from [https://chatgpt.com/](https://chatgpt.com/)
+
+Disease Prediction Using Machine Learning. (2025). GeeksforGeeks. Retrieved September 14, 2025 from [https://www.geeksforgeeks.org/machine-learning/disease-prediction-using-machine-learning/](https://www.geeksforgeeks.org/machine-learning/disease-prediction-using-machine-learning/)
+
+Ly, S. (2024). 8 Python Libraries You Must Know for Data Science. Simple Analytics. Retrieved September 14, 2025 from [https://simpleanalytics.co.nz/blogs/8-python-libraries-you-must-know-for-data-science](https://simpleanalytics.co.nz/blogs/8-python-libraries-you-must-know-for-data-science)
+
+SciPy. (n.d.). Retrieved September 14, 2025 from [https://scipy.org/](https://scipy.org/)
