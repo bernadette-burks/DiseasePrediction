@@ -45,7 +45,7 @@ The primary goal of this model is to explore how machine learning can assist in 
 
 One of the strengths of this project is its accessibility: it requires only a Python-compatible IDE with current updates applied, making it approachable for beginners entering the field of machine learning.
 
-For development, I used **Spyder (Python 3.13)**, as it is frequently recommended in similar GeeksforGeeks machine learning implementations.
+For development, I used **VS Code (Python 3.13)** as this is a frequently used IDE in enterprise settings.
 
 ---
 
