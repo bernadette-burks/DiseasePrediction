@@ -171,19 +171,19 @@ predict_disease(
     weight_loss=0,
     yellow_eyes=0
 )
-
+```
 ---
 
 ## 🛠 Key Skills Demonstrated
 
 This project highlights several core machine learning and healthcare analytics skills:
 
- • Data preprocessing and label encoding
- • Handling class imbalance with oversampling
- • Model training with cross-validation
- • Comparing classifier performance
- • Confusion matrix evaluation
- • Applying ML concepts in clinical prediction contexts
+- Data preprocessing and label encoding
+- Handling class imbalance with oversampling
+- Model training with cross-validation
+- Comparing classifier performance
+- Confusion matrix evaluation
+- Applying ML concepts in clinical prediction contexts
 
 ---
 
@@ -191,8 +191,8 @@ This project highlights several core machine learning and healthcare analytics s
 
 This project serves as an excellent starting point for continued development. Future enhancements may include:
 
-• Expanding model evaluation metrics beyond accuracy (precision, recall, F1-score)
-• Including all candidate models consistently in cross-validation
-• Testing additional algorithms such as Gradient Boosting or XGBoost
-• Improving interpretability using feature importance tools
-• Exploring real-world clinical datasets for stronger generalization
+- Expanding model evaluation metrics beyond accuracy (precision, recall, F1-score)
+- Including all candidate models consistently in cross-validation
+- Testing additional algorithms such as Gradient Boosting or XGBoost
+- Improving interpretability using feature importance tools
+- Exploring real-world clinical datasets for stronger generalization
