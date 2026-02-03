@@ -38,6 +38,7 @@
 - [Model Training Methods](#-model-training-methods)
 - [Model Evaluation](#-model-evaluation)
 - [Example Prediction Workflow](#-example-prediction-workflow)
+- [Results](#-results)
 - [Key Skills Demonstrated](#-key-skills-demonstrated)
 - [Future Improvements](#-future-improvements)
 - [Project Structure](#-project-structure)
@@ -187,6 +188,44 @@ predict_disease(
     yellow_eyes=0
 )
 ```
+---
+
+## 📊 Results
+
+Model performance was evaluated using confusion matrices and cross-validation accuracy.
+
+### Confusion Matrix Comparison
+
+| Model | Notes |
+|------|------|
+| Random Forest Classifier | Strong overall predictive consistency across symptom categories |
+| Support Vector Classifier (SVC) | Performed similarly to Random Forest on majority classes |
+| Naive Bayes (GaussianNB) | Included during final evaluation but not consistently cross-validated |
+
+### Random Forest Confusion Matrix
+
+![Random Forest Confusion Matrix](results/random_forest_matrix.png)
+
+### SVC Confusion Matrix
+
+![SVC Confusion Matrix](results/svc_matrix.png)
+
+### Naive Bayes Confusion Matrix
+
+![Naive Bayes Confusion Matrix](results/nb_matrix.png)
+
+### Combined Model Confusion Matrix
+
+![Combined Model Confusion Matrix](results/combined_model_matrix.png)
+
+Confusion matrices provide insight into:
+
+- Correct vs. incorrect disease classifications  
+- Class-level prediction strengths  
+- Potential areas of misclassification due to symptom overlap  
+
+> Future work should expand evaluation metrics to include precision, recall, and F1-score for clinical reliability.
+
 ---
 
 ## 🛠 Key Skills Demonstrated
