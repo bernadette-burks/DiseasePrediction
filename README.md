@@ -3,10 +3,25 @@
 # 🩺 Disease Prediction Model  
 ### *Machine Learning Project Assessment (Week 3)*
 
-![Python](https://img.shields.io/badge/Python-3.13-blue)
-![Machine Learning](https://img.shields.io/badge/Project-Machine%20Learning-success)
-![Healthcare](https://img.shields.io/badge/Domain-Healthcare-critical)
-![Status](https://img.shields.io/badge/Status-Academic%20Portfolio%20Project-informational)
+<!-- ===================================== -->
+<!-- 📌 Project Badges - Portfolio Ready -->
+<!-- ===================================== -->
+
+![Python 3.13](https://img.shields.io/badge/Python-3.13-blue?style=flat-square&logo=python&logoColor=white) 
+![NumPy 1.26.4](https://img.shields.io/badge/NumPy-1.26.4-orange?style=flat-square&logo=NumPy&logoColor=white) 
+![Pandas 2.1.1](https://img.shields.io/badge/Pandas-2.1.1-lightblue?style=flat-square&logo=pandas&logoColor=white) 
+![SciPy 1.12.1](https://img.shields.io/badge/SciPy-1.12.1-lightgreen?style=flat-square&logo=scipy&logoColor=white) 
+![Matplotlib 3.8.1](https://img.shields.io/badge/Matplotlib-3.8.1-red?style=flat-square&logo=matplotlib&logoColor=white) 
+![Seaborn 0.13.2](https://img.shields.io/badge/Seaborn-0.13.2-purple?style=flat-square&logo=seaborn&logoColor=white) 
+![Scikit-learn 1.3.2](https://img.shields.io/badge/Scikit--learn-1.3.2-green?style=flat-square&logo=scikit-learn&logoColor=white) 
+![imbalanced-learn 1.11.0](https://img.shields.io/badge/Imbalanced--learn-1.11.0-blue?style=flat-square&logo=none) 
+![Statsmodels 0.18.2](https://img.shields.io/badge/Statsmodels-0.18.2-lightgrey?style=flat-square&logo=statsmodels&logoColor=black) 
+![Plotly 5.20.0](https://img.shields.io/badge/Plotly-5.20.0-pink?style=flat-square&logo=plotly&logoColor=white) 
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange?style=flat-square&logo=jupyter&logoColor=white) 
+![Machine Learning](https://img.shields.io/badge/Project-Machine%20Learning-success?style=flat-square&logo=none) 
+![Healthcare](https://img.shields.io/badge/Domain-Healthcare-critical?style=flat-square&logo=none) 
+![Status](https://img.shields.io/badge/Status-Academic%20Portfolio%20Project-informational?style=flat-square&logo=none)
+
 
 **Author:** Bernadette Burks  
 **Date:** September 14, 2025  
