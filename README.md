@@ -1,7 +1,7 @@
 ![Disease Prediction Banner](assets/dp_banner_update.png)
 
 # 🩺 Disease Prediction Model  
-### *Machine Learning Project Assessment (Week 3)*
+### *Machine Learning Project Assessment*
 
 <!-- ===================================== -->
 <!-- 📌 Project Badges - Portfolio Ready -->
