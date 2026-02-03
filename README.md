@@ -202,19 +202,11 @@ Model performance was evaluated using confusion matrices and cross-validation ac
 | Support Vector Classifier (SVC) | Performed similarly to Random Forest on majority classes |
 | Naive Bayes (GaussianNB) | Included during final evaluation but not consistently cross-validated |
 
-### Random Forest Confusion Matrix
-
 ![Random Forest Confusion Matrix](results/random_forest_matrix.png)
-
-### SVC Confusion Matrix
 
 ![SVC Confusion Matrix](results/svc_matrix.png)
 
-### Naive Bayes Confusion Matrix
-
 ![Naive Bayes Confusion Matrix](results/nb_matrix.png)
-
-### Combined Model Confusion Matrix
 
 ![Combined Model Confusion Matrix](results/combined_model_matrix.png)
 
