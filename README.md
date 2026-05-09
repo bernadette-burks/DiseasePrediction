@@ -1,5 +1,3 @@
-![Disease Prediction Banner](assets/dp_banner_update.png)
-
 # 🩺 Disease Prediction Model  
 ### *Machine Learning Project Assessment*
 
