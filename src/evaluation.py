@@ -14,9 +14,8 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 from statistics import mode
 import matplotlib.pyplot as plt
 import seaborn as sns
-
 from src.training import models, rf_model, nb_model, svm_model
-from src.preprocessing import X_resampled, y_resampled
+from src.preprocess import X_resampled, y_resampled
 
 cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
