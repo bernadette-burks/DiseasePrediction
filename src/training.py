@@ -6,7 +6,7 @@
 # fit/train models
 # produce trained objects
 
-from preprocessing import X_resampled, y_resampled
+from src.preprocess import X_resampled, y_resampled
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB 
 from sklearn.svm import SVC

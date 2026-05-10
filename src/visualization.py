@@ -2,8 +2,14 @@
 # Author: Bernadette Burks
 # Created: Sept. 14, 2025
 
-import ipywidgets as widgets
-from IPython.display import display, clear_output
+try:
+    import ipywidgets as widgets
+    from IPython.display import display, clear_output
+except ImportError:
+    widgets = None
+    display = None
+    clear_output = None
+
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 

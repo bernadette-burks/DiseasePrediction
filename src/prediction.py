@@ -10,9 +10,8 @@
 
 import pandas as pd
 from statistics import mode
-
 from src.training import rf_model, nb_model, svm_model
-from src.preprocessing import symptom_index, encoder, X_resampled
+from src.preprocess import symptom_index, encoder, X_resampled
 
 symptoms = X_resampled.columns
 
