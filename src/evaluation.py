@@ -14,7 +14,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 from statistics import mode
 import matplotlib.pyplot as plt
 import seaborn as sns
-from src.training import models, rf_model, nb_model, svm_model
+from src.training import models, rf_model, dt_model, svm_model
 from src.preprocess import X_resampled, y_resampled
 
 cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
@@ -41,10 +41,10 @@ def plot_confusion(model, X, y, title):
 
 
 svm_preds = plot_confusion(svm_model, X_resampled, y_resampled, "SVM")
-nb_preds = plot_confusion(nb_model, X_resampled, y_resampled, "NB")
+dt_preds = plot_confusion(dt_model, X_resampled, y_resampled, "Decision Tree")
 rf_preds = plot_confusion(rf_model, X_resampled, y_resampled, "RF")
 
-final_preds = [mode([i, j, k]) for i, j, k in zip(svm_preds, nb_preds, rf_preds)]
+final_preds = [mode([i, j, k]) for i, j, k in zip(svm_preds, dt_preds, rf_preds)]
 
 cm = confusion_matrix(y_resampled, final_preds)
 

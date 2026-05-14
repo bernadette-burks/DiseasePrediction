@@ -3,23 +3,26 @@
 # Created: Sept. 14, 2025
 
 try:
-    import ipywidgets as widgets
-    from IPython.display import display, clear_output
+    import ipywidgets as widgets  # type: ignore
+    from IPython.display import display, clear_output  # type: ignore
 except ImportError:
     widgets = None
     display = None
     clear_output = None
 
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
+try:
+    import plotly.graph_objects as go  # type: ignore
+    from plotly.subplots import make_subplots  # type: ignore
+except ImportError:
+    go = None
+    make_subplots = None
 
-from src.preprocessing import symptom_index
-from src.training import predict_disease, rf_model, nb_model, svm_model
-
-
+from src.preprocess import symptom_index
+import src.training
+import src.prediction
 
 # Example usage
-print(predict_disease("skin_rash, fever, headache", rf_model, nb_model, svm_model))
+print(src.prediction.predict_disease("skin_rash, fever, headache", src.training.rf_model, src.training.dt_model, src.training.svm_model))
 
 symptom_selector = widgets.SelectMultiple(
     options=list(symptom_index.keys()),  # symptom_index must already exist
@@ -41,7 +44,7 @@ def update_visualization(change):
             return
 
         # Get predictions
-        results = predict_disease(selected_symptoms, rf_model, nb_model, svm_model) # pyright: ignore[reportUndefinedVariable]
+        results = src.prediction.predict_disease(selected_symptoms, src.training.rf_model, src.training.dt_model, src.training.svm_model) # pyright: ignore[reportUndefinedVariable]
 
         # Print textual results
         print("Selected Symptoms:", selected_symptoms)

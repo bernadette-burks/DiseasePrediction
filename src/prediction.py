@@ -10,7 +10,7 @@
 
 import pandas as pd
 from statistics import mode
-from src.training import rf_model, nb_model, svm_model
+from src.training import rf_model, dt_model, svm_model
 from src.preprocess import symptom_index, encoder, X_resampled
 
 symptoms = X_resampled.columns
@@ -29,14 +29,14 @@ def predict_disease(input_symptoms):
     input_df = pd.DataFrame([input_data], columns=symptoms)
 
     rf_pred = encoder.classes_[rf_model.predict(input_df)[0]]
-    nb_pred = encoder.classes_[nb_model.predict(input_df)[0]]
+    dt_pred = encoder.classes_[dt_model.predict(input_df)[0]]
     svm_pred = encoder.classes_[svm_model.predict(input_df)[0]]
 
-    final_pred = mode([rf_pred, nb_pred, svm_pred])
+    final_pred = mode([rf_pred, dt_pred, svm_pred])
 
     return {
         "Random Forest": rf_pred,
-        "Naive Bayes": nb_pred,
+        "Decision Tree": dt_pred,
         "SVM": svm_pred,
         "Final Prediction": final_pred
     }

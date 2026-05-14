@@ -8,19 +8,19 @@
 
 from src.preprocess import X_resampled, y_resampled
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.naive_bayes import GaussianNB 
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
 
 rf_model = RandomForestClassifier(random_state=42)
-nb_model = GaussianNB()
+dt_model = DecisionTreeClassifier(random_state=42)
 svm_model = SVC()
 
 rf_model.fit(X_resampled, y_resampled)
-nb_model.fit(X_resampled, y_resampled)
+dt_model.fit(X_resampled, y_resampled)
 svm_model.fit(X_resampled, y_resampled)
 
 models = {
     "Random Forest": rf_model,
-    "Naive Bayes": nb_model,
+    "Decision Tree": dt_model,
     "SVM": svm_model
 }
