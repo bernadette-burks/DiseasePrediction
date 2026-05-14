@@ -1,6 +1,6 @@
 # Disease Prediction Model 🩺  
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square)
 ![Machine Learning](https://img.shields.io/badge/Project-Machine%20Learning-success?style=flat-square&logo=none) 
 ![Healthcare](https://img.shields.io/badge/Domain-Healthcare-critical?style=flat-square&logo=none) 
 ![Status](https://img.shields.io/badge/Status-Academic%20Portfolio%20Project-informational?style=flat-square&logo=none)  
