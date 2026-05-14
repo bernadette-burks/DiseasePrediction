@@ -148,7 +148,7 @@ Model performance was evaluated using confusion matrices and cross-validation ac
 |------|------|
 | Random Forest Classifier | Strong overall predictive consistency across symptom categories |
 | Support Vector Classifier (SVC) | Performed similarly to Random Forest on majority classes |
-| Decision Tree Classifier | TBD |
+| Decision Tree Classifier | Variance in outcome was likely skewed due to "noise" in dataset |
 
 ![Random Forest Confusion Matrix](results/random_forest_matrix.png)
 
