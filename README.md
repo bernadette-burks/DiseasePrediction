@@ -1,15 +1,11 @@
-# 🩺 Disease Prediction Model  
-### *Machine Learning Project Assessment*
+# Disease Prediction Model 🩺  
 
-<!-- ===================================== -->
-<!-- 📌 Project Badges - Portfolio Ready -->
-<!-- ===================================== -->
-
-![Python](https://img.shields.io/badge/Python-3.13-blue?style=flat-square&logo=python&logoColor=white) 
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![Machine Learning](https://img.shields.io/badge/Project-Machine%20Learning-success?style=flat-square&logo=none) 
 ![Healthcare](https://img.shields.io/badge/Domain-Healthcare-critical?style=flat-square&logo=none) 
-![Status](https://img.shields.io/badge/Status-Academic%20Portfolio%20Project-informational?style=flat-square&logo=none)
+![Status](https://img.shields.io/badge/Status-Academic%20Portfolio%20Project-informational?style=flat-square&logo=none)  
 
+Machine learning model of clinical symptoms to determine likelihood of certain diseases using scikit-learn classification.
 
 **Author:** Bernadette Burks  
 **Date:** September 14, 2025  
@@ -18,8 +14,7 @@
 
 ## 📑 Table of Contents
 
-- [Project Overview](#-project-overview)
-- [Required Technologies](#-required-technologies)
+- [Overview](#-overview)
 - [Python Libraries](#-python-libraries)
 - [Dataset Details](#-dataset-details)
 - [Data Preparation & Cleaning](#-data-preparation--cleaning)
@@ -34,22 +29,12 @@
 
 ---
 
-## 📌 Project Overview
+## 📌 Overview
 
-For this assignment, I developed a **Disease Prediction Model** based on the GeeksforGeeks tutorial:  
+This **Disease Prediction Model** is based on a GeeksforGeeks tutorial:  
 https://www.geeksforgeeks.org/machine-learning/disease-prediction-using-machine-learning/
 
-This project was selected intentionally to align with my ongoing healthcare-related academic work.
-
-The primary goal of this model is to explore how machine learning can assist in identifying diseases based on symptom patterns commonly presented in clinical environments, such as Emergency Departments.
-
----
-
-## ⚙️ Required Technologies
-
-One of the strengths of this project is its accessibility: it requires only a Python-compatible IDE with current updates applied, making it approachable for beginners entering the field of machine learning.
-
-For development, I used **VS Code (Python 3.13)** as this is a frequently used IDE in enterprise settings.
+The primary goal of this model is to explore how machine learning can assist in identifying diseases based on symptom patterns in datasets. 
 
 ---
 
@@ -107,11 +92,7 @@ This results in:
 
 ## 🧹 Data Preparation & Cleaning
 
-A recommended preprocessing step involves converting disease labels into numeric values to support early visualization and detection of class imbalance.
-
-Because certain disease categories were underrepresented, the dataset benefits from applying **RandomOverSampler**, ensuring that each disease class receives equal representation during training.
-
-This balancing improves the model’s ability to generalize rather than overfitting to dominant categories.
+A recommended preprocessing step involves converting disease labels into numeric values to support early visualization and detection of class imbalance. Additionally, because certain disease categories were underrepresented, the dataset benefits from applying **RandomOverSampler**.
 
 ---
 
@@ -123,38 +104,17 @@ For cross-validation, the project evaluates three primary machine learning class
 - `RandomForestClassifier()`  
 - `SVC()`  
 
-However, during the confusion matrix evaluation stage, the `DecisionTreeClassifier()` appears to be replaced with `GaussianNB()`.
-
-After researching this discrepancy and finding limited discussion online, I consulted ChatGPT for clarification.
-
----
-
-### 💬 ChatGPT Clarification
-
-> This looks like a design inconsistency, not an intentional strategy:  
->
-> • The CV section should ideally include all models you care about evaluating, to compare them fairly.  
-> • Adding Naive Bayes only later (without CV scores) means you don’t know how it performs under cross-validation — only how it memorizes the whole dataset (which can inflate accuracy).  
->
-> So yes — I’d call this at least a mistake in consistency. The author probably meant to include GaussianNB in the CV loop but forgot to add it to models.
-
----
-
-### ✅ Best Practice Recommendation
-
-- Include all candidate models in the cross-validation loop  
-  (Decision Tree, Random Forest, SVM, Naive Bayes).  
-- Retrain afterward only for confusion matrices or final ensemble predictions.
+*Note: I found an error in the original author's code during the confusion matrix evaluation stage: the `DecisionTreeClassifier()` appears to be replaced with `GaussianNB()`. I fixed this in my version of the assignment.*
 
 ---
 
 ## 📈 Model Evaluation
 
-The project concludes by producing a final predictive function, **predict_disease**, which accepts symptom inputs and outputs a predicted diagnosis.
+The project produces a final predictive function, **predict_disease**, which accepts symptom inputs and outputs a predicted diagnosis.
 
-Across the trained models, two out of three classifiers (67%) produced the same disease prediction given identical symptom sets.
+Across the trained models, two of three classifiers (67%) produced the same disease prediction given identical symptom sets.
 
-While this performance level would require significant improvement before clinical deployment, it serves as a strong educational foundation and demonstrates the potential for future refinement in healthcare-oriented machine learning applications.
+While this performance level would require significant improvement before clinical deployment, it serves as a strong educational foundation and demonstrates the potential for future refinement in healthcare-oriented machine learning applications given a more robust dataset.
 
 ---
 
@@ -188,13 +148,13 @@ Model performance was evaluated using confusion matrices and cross-validation ac
 |------|------|
 | Random Forest Classifier | Strong overall predictive consistency across symptom categories |
 | Support Vector Classifier (SVC) | Performed similarly to Random Forest on majority classes |
-| Naive Bayes (GaussianNB) | Included during final evaluation but not consistently cross-validated |
+| Decision Tree Classifier | TBD |
 
 ![Random Forest Confusion Matrix](results/random_forest_matrix.png)
 
 ![SVC Confusion Matrix](results/svc_matrix.png)
 
-![Naive Bayes Confusion Matrix](results/nb_matrix.png)
+![Decision Tree Confusion Matrix](results/dt_matrix.png)
 
 ![Combined Model Confusion Matrix](results/combined_model_matrix.png)
 
@@ -203,8 +163,6 @@ Confusion matrices provide insight into:
 - Correct vs. incorrect disease classifications  
 - Class-level prediction strengths  
 - Potential areas of misclassification due to symptom overlap  
-
-> Future work should expand evaluation metrics to include precision, recall, and F1-score for clinical reliability.
 
 ---
 
@@ -217,7 +175,7 @@ This project highlights several core machine learning and healthcare analytics s
 - Model training with cross-validation
 - Comparing classifier performance
 - Confusion matrix evaluation
-- Applying ML concepts in clinical prediction contexts
+- Applying ML concepts to clinical analysis
 
 ---
 
@@ -225,17 +183,15 @@ This project highlights several core machine learning and healthcare analytics s
 
 This project serves as an excellent starting point for continued development. Future enhancements may include:
 
-- Expanding model evaluation metrics beyond accuracy (precision, recall, F1-score)
-- Including all candidate models consistently in cross-validation
-- Testing additional algorithms such as Gradient Boosting or XGBoost
-- Improving interpretability using feature importance tools
-- Exploring real-world clinical datasets for stronger generalization
+- Expanding evaluation metrics beyond accuracy (precision, recall, F1-score)
+- Additional algorithms such as Gradient Boosting or XGBoost
+- Feature importance tools for enhanced understanding
+- Larger clinical datasets for stronger generalization
+- Hosting the model via a GUI or dashboard
 
 ---
 
 ## 🔗 References
-
-ChatGPT. (n.d.). Retrieved September 14, 2025 from [https://chatgpt.com/](https://chatgpt.com/)
 
 Disease Prediction Using Machine Learning. (2025). GeeksforGeeks. Retrieved September 14, 2025 from [https://www.geeksforgeeks.org/machine-learning/disease-prediction-using-machine-learning/](https://www.geeksforgeeks.org/machine-learning/disease-prediction-using-machine-learning/)
 
